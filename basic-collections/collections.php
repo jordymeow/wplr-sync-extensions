@@ -1,14 +1,11 @@
 <?php
 /*
-Hyphens are added in the header below to avoid WordPress to recognize this extension as a real plugin. It's actually not a big problem but it displays an error while installing the plugin. If you want to use this extension as a standalone plugin, you can remove the hyphens ;)
-
-- Plugin Name: Basic Collections
-- Plugin URI: http://www.meow.fr
-- Plugin Key: 2
-- Description: Create collections (post type) and create standard galleries in the post of those collections.<br />The text around the gallery shorcode can be modified.
-- Version: 0.1.0
-- Author: Jordy Meow
-- Author URI: http://www.meow.fr
+	Plugin Name: Basic Collections
+	Plugin URI: http://www.meow.fr
+	Description: Create collections (post type) and create standard galleries in the post of those collections.<br />The text around the gallery shorcode can be modified.
+	Version: 0.1.0
+	Author: Jordy Meow
+	Author URI: http://www.meow.fr
 */
 
 class WPLR_Extension_Collections {
@@ -98,7 +95,7 @@ class WPLR_Extension_Collections {
 		$post = array(
 			'post_title'    => wp_strip_all_tags( $collection['name'] ),
 			// if folder, nothing, if collection, let's start a gallery
-			'post_content'  => $isFolder ? '' : '[gallery link="file" size="large" ids=""]', 
+			'post_content'  => $isFolder ? '' : '[gallery link="file" size="large" ids=""]',
 			'post_status'   => 'publish',
 			'post_type'     => 'collection',
 			'post_parent'   => $post_parent
